@@ -11,7 +11,8 @@ namespace Comp229_Assign04
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            modellist.DataSource = Global.models;
+            modellist.DataBind();
         }
     }
 }
