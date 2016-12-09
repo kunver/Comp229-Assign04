@@ -3,12 +3,12 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-   <h1>WARGAME</h1>
+   <h1>Wrath of Kings</h1>
     </div>
 
     <div>
         <h4>This is our current list of models.</h4>
-        <div class="col-md-4">
+        <div>
              <table>
         <asp:Repeater ID="modellist" runat="server">
             <ItemTemplate>
