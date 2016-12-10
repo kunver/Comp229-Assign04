@@ -10,14 +10,16 @@ namespace Comp229_Assign04
     public partial class Model : System.Web.UI.Page
     {
         private models.BaseStats basestats;
+        protected string vName;
+        protected string vFaction;
         protected void Page_Load(object sender, EventArgs e)
         {
-         string name = Request.QueryString["name"];
-         string faction = Request.QueryString["faction"];
+         vName = Request.QueryString["name"];
+         vFaction = Request.QueryString["faction"];
 
             if (name != null && faction != null)
             {
-                basestats = Global.models.FirstOrDefault(tModel => tModel.name == name && tModel.faction == faction);
+                basestats = Global.models.FirstOrDefault(tModel => tModel.name == vName && tModel.faction == vFaction);
                  selectedmodel();
             }
             else
@@ -44,6 +46,12 @@ namespace Comp229_Assign04
             wounds.Text = basestats.wounds.ToString();
 
 
+        }
+
+        protected void Update_Click(object sender, EventArgs e)
+        {
+            string url = string.Format("~/Update.aspx?name={0}&faction={1}", vName, vFaction);
+            Response.Redirect(url);
         }
     }
 }

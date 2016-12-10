@@ -57,7 +57,7 @@
     </div>
 <div style="clear:both"></div>
         <div>
-            <asp:Button ID="Update" runat="server" Text="Update" />
+            <asp:Button ID="Update" runat="server" Text="Update" OnClick="Update_Click" />
         </div>
    
 </asp:Content>
