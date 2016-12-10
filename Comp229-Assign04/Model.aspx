@@ -58,6 +58,8 @@
 <div style="clear:both"></div>
         <div>
             <asp:Button ID="Update" runat="server" Text="Update" OnClick="Update_Click" />
+            <br />
+            <asp:Button ID="Delete" runat="server" OnClick="Delete_Click" Text="Delete Model" Width="157px" />
         </div>
    
 </asp:Content>

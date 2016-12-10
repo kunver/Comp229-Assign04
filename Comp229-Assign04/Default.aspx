@@ -28,4 +28,8 @@
         </div>
     </div>
 
+    <br />
+    <asp:Button ID="addbtn" runat="server" OnClick="addbtn_Click" Text="Add Model" />
+    <asp:Label ID="statuslbl" runat="server"></asp:Label>
+
 </asp:Content>

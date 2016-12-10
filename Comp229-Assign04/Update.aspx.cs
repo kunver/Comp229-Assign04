@@ -70,13 +70,15 @@ namespace Comp229_Assign04
 
 
 
-            using (StreamWriter writer = File.CreateText(HostingEnvironment.MapPath("~/Assign04.json")))
+            using (StreamWriter writer = File.CreateText(HostingEnvironment.MapPath("~/updatedmodels.json")))
             {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(writer, basestats);
+               
+                writer.WriteLine(JsonConvert.SerializeObject(basestats));
             }
          
             Response.Redirect("~/Default.aspx");
         }
+
+     
     }
 }

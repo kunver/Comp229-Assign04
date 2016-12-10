@@ -25,6 +25,11 @@ namespace Comp229_Assign04
             public Action[] actions { get; set; }
             public Specialability[] specialAbilities { get; set; }
             public string imageUrl { get; set; }
+
+            internal void RemoveAll(Func<object, bool> p)
+            {
+                throw new NotImplementedException();
+            }
         }
 
         public class Action

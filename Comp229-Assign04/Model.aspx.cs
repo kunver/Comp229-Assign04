@@ -53,5 +53,11 @@ namespace Comp229_Assign04
             string url = string.Format("~/Update.aspx?name={0}&faction={1}", vName, vFaction);
             Response.Redirect(url);
         }
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+            //remove based on vname and vfaction          
+            Global.models.RemoveAll(tModel => tModel.name == vName && tModel.faction == vFaction);
+            Response.Redirect("~/Default.aspx");
+        }
     }
 }
